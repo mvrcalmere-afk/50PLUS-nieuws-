@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>50PLUS Almere — Dagelijks Nieuws | 19 februari 2026</title>
+<meta property="og:title" content="50PLUS Dagelijks Nieuws — Donderdag 19 februari 2026">
+<meta property="og:description" content="Verkiezingsnieuws & lokaal nieuws relevant voor 50PLUS Almere & Flevoland">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--purple-deep:#5F015C;--purple-mid:#91268F;--purple-light:#B84DB6;--purple-pale:#F3E5F3;--red-deep:#7B1A2C;--red-mid:#A31545;--red-light:#D81B60;--red-pale:#FDE8EF;--green-ok:#2E7D32;--blue-mid:#1565C0;--blue-pale:#E3F2FD;--white:#FFF;--gray-50:#FAFAFA;--gray-100:#F5F5F5;--gray-200:#EEE;--gray-400:#BDBDBD;--gray-600:#757575;--gray-800:#424242;--gray-900:#212121}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--gray-100);color:var(--gray-900);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:680px;margin:0 auto;background:var(--white);min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,.06)}
+
+/* HEADER */
+.header{background:linear-gradient(135deg,var(--purple-deep) 0%,var(--purple-mid) 100%);padding:24px 20px 20px;position:relative;overflow:hidden}
+.header::after{content:'';position:absolute;top:-60%;right:-25%;width:320px;height:320px;background:rgba(255,255,255,.035);border-radius:50%;pointer-events:none}
+.header-top{display:flex;align-items:center;gap:16px;margin-bottom:16px;position:relative;z-index:1}
+.logo-box{width:60px;height:60px;flex-shrink:0;background:var(--white);border-radius:10px;padding:5px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.logo-box svg{width:100%;height:100%}
+.header-title{color:var(--white)}
+.header-title h1{font-weight:900;font-size:22px;letter-spacing:-.3px;line-height:1.15}
+.header-title .subtitle{font-size:13px;opacity:.75;font-weight:400;margin-top:2px}
+.date-bar{background:rgba(255,255,255,.12);border-radius:8px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.date-bar .date{color:var(--white);font-weight:700;font-size:15px}
+.date-bar .sources{color:rgba(255,255,255,.65);font-size:11px;text-align:right;line-height:1.4}
+
+/* COUNTDOWN */
+.countdown{background:linear-gradient(90deg,var(--red-mid),var(--red-light));color:var(--white);padding:12px 20px;font-size:14px;font-weight:700;display:flex;align-items:center;gap:10px}
+.countdown .days{background:rgba(255,255,255,.25);padding:2px 10px;border-radius:6px;font-size:18px;font-weight:900;letter-spacing:-.5px}
+
+/* PART HEADERS */
+.part-header{padding:20px 20px 14px;display:flex;align-items:center;gap:12px}
+.part-header .icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.part-header .icon.election{background:var(--red-pale)}
+.part-header .icon.fiftplus{background:var(--purple-pale)}
+.part-header h2{font-size:18px;font-weight:900;letter-spacing:-.3px;line-height:1.2}
+.part-header .part-sub{font-size:12px;font-weight:400;color:var(--gray-600)}
+.part-divider{height:4px;margin:0 20px;border-radius:2px}
+.part-divider.red{background:linear-gradient(90deg,var(--red-mid),var(--red-pale))}
+.part-divider.purple{background:linear-gradient(90deg,var(--purple-mid),var(--purple-pale))}
+
+/* SECTIONS */
+.section{padding:0 16px}
+.section-header{display:flex;align-items:center;gap:10px;padding:16px 0 10px;border-bottom:2px solid var(--gray-200)}
+.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.dot-red{background:#C62828}
+.dot-orange{background:#E65100}
+.dot-yellow{background:#F9A825}
+.section-header h3{font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.6px;color:var(--gray-800)}
+.section-header .count{background:var(--gray-200);color:var(--gray-600);font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:auto}
+
+/* === NEWS CARD BLOCKS === */
+.news-card{margin:12px 0;border-radius:10px;padding:14px 16px;border:1.5px solid var(--gray-200);background:var(--white);box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.news-card.election-card{border-left:4px solid var(--red-mid);background:#FFF8FA}
+.news-card.prio-high{border-left:4px solid #C62828;background:#FFF8F8}
+.news-card.prio-med{border-left:4px solid #E65100;background:#FFFCF5}
+.news-card.prio-low{border-left:4px solid #F9A825;background:#FFFEF5}
+.news-card-header{display:flex;align-items:flex-start;gap:10px}
+.nc-num{background:var(--purple-pale);color:var(--purple-mid);font-weight:900;font-size:10px;width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.nc-num.election-num{background:var(--red-pale);color:var(--red-mid)}
+.nc-title{font-family:'Source Serif 4',Georgia,serif;font-size:15.5px;font-weight:700;color:var(--gray-900);line-height:1.35;flex:1}
+.nc-meta{display:flex;align-items:center;gap:6px;margin:6px 0 6px 32px;flex-wrap:wrap}
+
+/* === BRON LABELS - MAX CONTRAST === */
+.src{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;padding:3px 8px;border-radius:4px;border:2px solid}
+.src-adw{background:#FFF3C4;color:#8B5E00;border-color:#D4A017}
+.src-oa{background:#C8F7C5;color:#0B5509;border-color:#27AE60}
+.src-of{background:#BDE0FE;color:#0A3D7A;border-color:#2980B9}
+.src-1a{background:#FFCDD2;color:#8B0000;border-color:#E53935}
+
+.nc-desc{font-size:13.5px;color:var(--gray-600);line-height:1.5;margin-left:32px}
+.nc-desc strong{color:var(--purple-mid);font-weight:700}
+
+/* === WAAROM BELANGRIJK === */
+.nc-why{margin:8px 0 4px 32px;padding:8px 12px;border-radius:6px;background:linear-gradient(90deg,#FDE8EF,#FCE4EC);border-left:3px solid var(--red-mid);font-size:12.5px;color:var(--red-deep);font-weight:600;line-height:1.45}
+.nc-why span{font-weight:900;text-transform:uppercase;font-size:10px;letter-spacing:.5px;display:block;margin-bottom:2px;color:var(--red-mid)}
+
+.nc-links{margin:8px 0 0 32px;display:flex;gap:6px;flex-wrap:wrap}
+.nc-link{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:700;text-decoration:none;padding:4px 10px;border-radius:5px;transition:all .15s}
+.nc-link.purple{color:var(--purple-mid);background:var(--purple-pale)}
+.nc-link.purple:hover{background:var(--purple-mid);color:var(--white)}
+.nc-link.red{color:var(--red-mid);background:var(--red-pale)}
+.nc-link.red:hover{background:var(--red-mid);color:var(--white)}
+
+/* CALLOUTS */
+.callout{margin:16px 16px;border-radius:12px;padding:16px}
+.callout h3{font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.callout-purple{background:var(--purple-pale);border-left:4px solid var(--purple-mid)}
+.callout-purple h3{color:var(--purple-deep)}
+.callout-red{background:var(--red-pale);border-left:4px solid var(--red-mid)}
+.callout-red h3{color:var(--red-deep)}
+.callout-item{font-size:13.5px;color:var(--gray-800);padding:6px 0;line-height:1.5;border-bottom:1px solid rgba(0,0,0,.06)}
+.callout-item:last-child{border-bottom:none}
+.callout-item strong{color:var(--purple-deep)}
+.callout-red .callout-item strong{color:var(--red-deep)}
+.callout-item a{color:var(--red-mid);text-decoration:none;font-weight:700;border-bottom:1px dashed var(--red-light)}
+.callout-item a:hover{color:var(--red-deep);border-bottom-style:solid}
+
+/* PARTIJ GRID */
+.election-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
+.eg-item{font-size:12px;padding:10px 12px;background:var(--white);border-radius:8px;line-height:1.4;border:1.5px solid rgba(0,0,0,.08);box-shadow:0 1px 3px rgba(0,0,0,.03)}
+.eg-item .party{font-weight:900;color:var(--red-deep);font-size:11px;text-transform:uppercase;letter-spacing:.3px}
+.eg-item a{color:var(--red-mid);text-decoration:none;font-size:11px;font-weight:700}
+.eg-item a:hover{text-decoration:underline}
+
+/* FOOTER */
+.footer{background:var(--gray-100);padding:20px;text-align:center;border-top:1px solid var(--gray-200)}
+.footer p{font-size:11.5px;color:var(--gray-600);line-height:1.6}
+.footer .brand{font-weight:700;color:var(--purple-mid)}
+@media(max-width:420px){.header{padding:16px 14px}.header-title h1{font-size:19px}.section{padding:0 10px}.nc-title{font-size:14.5px}.date-bar{flex-direction:column;gap:4px;align-items:flex-start}.election-grid{grid-template-columns:1fr}.news-card{padding:12px 12px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="header-top">
+      <div class="logo-box">
+        <svg viewBox="0 0 1611 1738" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(1,0,0,1,-434.828,-316.822)"><g transform="matrix(4.16667,0,0,4.16667,434.828,316.076)"><rect x="45.072" y="42.929" width="341.486" height="295.071" style="fill:rgba(95,1,92,0.15)"/></g><g transform="matrix(4.16667,0,0,4.16667,434.828,316.076)"><rect x="11.659" y="11.839" width="341.485" height="295.069" style="fill:white"/></g><g transform="matrix(4.16667,0,0,4.16667,434.828,316.076)"><path d="M364.803,0.179L0,0.179L0,318.567L364.803,318.567L364.803,0.179ZM353.144,11.839L353.144,306.908L11.659,306.908L11.659,11.839L353.144,11.839Z" style="fill:rgb(145,38,143)"/></g><g transform="matrix(4.16667,0,0,4.16667,434.828,316.076)"><rect x="9.715" y="215.01" width="347.307" height="96.726" style="fill:rgb(145,38,143)"/></g><g transform="matrix(4.16667,0,0,4.16667,434.828,316.076)"><path d="M95.715,64.538L92.775,83.98L106.792,82.85C141.604,80.137 167.148,108.62 167.148,143.884C167.148,161.742 159.237,178.472 145.221,189.999C131.659,200.853 112.443,204.242 95.489,204.242C76.047,204.242 56.38,199.494 39.878,188.867L46.435,147.049C59.545,158.805 76.273,166.717 93.906,166.717C107.923,166.717 121.034,156.543 121.034,141.624C121.034,121.054 101.366,112.463 83.733,112.463C72.431,112.463 61.354,114.722 51.181,119.471L66.102,27.014L154.717,27.014L154.717,64.538L95.715,64.538Z" style="fill:rgb(145,38,143)"/></g><g transform="matrix(4.16667,0,0,4.16667,434.828,316.076)"><path d="M232.024,112.011C232.024,128.513 237.452,165.134 260.284,165.134C283.113,165.134 288.54,128.513 288.54,112.011C288.54,95.51 283.113,59.34 260.284,59.34C237.452,59.34 232.024,95.51 232.024,112.011ZM332.623,112.237C332.623,156.543 311.146,204.242 260.284,204.242C209.42,204.242 187.944,156.543 187.944,112.237C187.944,67.929 209.646,20.232 260.284,20.232C310.921,20.232 332.623,67.929 332.623,112.237Z" style="fill:rgb(145,38,143)"/></g><g transform="matrix(4.16667,0,0,4.16667,434.828,316.076)"><path d="M69.209,262.762L72.414,262.762C79.31,262.762 86.109,262.762 86.109,253.824C86.109,244.597 79.795,244.499 72.414,244.499L69.209,244.499L69.209,262.762ZM50.169,229.15L79.31,229.15C95.047,229.15 105.926,236.437 105.926,253.243C105.926,270.531 96.601,278.11 79.991,278.11L69.209,278.11L69.209,302.392L50.169,302.392L50.169,229.15Z" style="fill:white"/></g><g transform="matrix(4.16667,0,0,4.16667,434.828,316.076)"><path d="M143.147,286.269L165.974,286.269L165.974,302.392L124.108,302.392L124.108,229.15L143.147,229.15L143.147,286.269Z" style="fill:white"/></g><g transform="matrix(4.16667,0,0,4.16667,434.828,316.076)"><path d="M245.445,229.15L245.445,270.337C245.445,279.757 245.058,289.086 237.771,296.176C231.653,302.199 222.034,304.336 213.487,304.336C204.938,304.336 195.322,302.199 189.203,296.176C181.917,289.086 181.528,279.757 181.528,270.337L181.528,229.15L200.567,229.15L200.567,267.715C200.567,277.233 201.247,287.629 213.487,287.629C225.725,287.629 226.408,277.233 226.408,267.715L226.408,229.15L245.445,229.15Z" style="fill:white"/></g><g transform="matrix(4.16667,0,0,4.16667,434.828,316.076)"><path d="M307.438,247.998C303.938,245.083 299.471,243.14 294.807,243.14C291.312,243.14 286.65,245.181 286.65,249.258C286.65,253.531 291.797,255.186 295.103,256.253L299.957,257.71C310.154,260.72 318.026,265.87 318.026,277.719C318.026,285.002 316.276,292.486 310.447,297.435C304.716,302.294 297.046,304.336 289.66,304.336C280.434,304.336 271.397,301.226 263.921,295.982L272.08,280.634C276.84,284.812 282.472,288.213 288.98,288.213C293.448,288.213 298.207,285.973 298.207,280.827C298.207,275.483 290.73,273.638 286.65,272.473C274.699,269.077 266.835,265.965 266.835,251.786C266.835,236.924 277.424,227.208 292.089,227.208C299.471,227.208 308.508,229.538 315.013,233.23L307.438,247.998Z" style="fill:white"/></g></g></svg>
+      </div>
+      <div class="header-title">
+        <h1>Dagelijks Nieuws</h1>
+        <div class="subtitle">Almere &amp; Flevoland — voor 50PLUS</div>
+      </div>
+    </div>
+    <div class="date-bar">
+      <span class="date">📅 Donderdag 19 februari 2026</span>
+      <span class="sources">ADW · 1Almere · Omroep Almere · Omroep Flevoland</span>
+    </div>
+  </div>
+
+  <div class="countdown">🗳️ Gemeenteraadsverkiezingen Almere <span class="days">27</span> dagen (18 maart)</div>
+
+  <!-- ═══════ DEEL 1: VERKIEZINGSNIEUWS ═══════ -->
+  <div class="part-header">
+    <div class="icon election">🗳️</div>
+    <div><h2>Verkiezingsnieuws</h2><div class="part-sub">Campagne, debatten, partijen &amp; peilingen</div></div>
+  </div>
+  <div class="part-divider red"></div>
+
+  <div class="section">
+
+    <div class="news-card election-card">
+      <div class="news-card-header">
+        <span class="nc-num election-num">1</span>
+        <span class="nc-title">Stemhulp Almere Kiest gaat vandaag online — 19 partijen</span>
+      </div>
+      <div class="nc-meta"><span class="src src-adw">ADW</span></div>
+      <div class="nc-desc">De onafhankelijke stemhulp voor de gemeenteraadsverkiezingen gaat vandaag live op almerekiest.nl. Alle 19 deelnemende partijen staan erin.</div>
+      <div class="nc-why"><span>Waarom belangrijk</span>Veel kiezers gebruiken stemhulpen om hun keuze te maken. Als 50PLUS-standpunten hier onjuist of onvolledig staan, beïnvloedt dat direct het stemgedrag. Vandaag checken.</div>
+      <div class="nc-links"><a href="https://almerekiest.nl/" class="nc-link red" target="_blank">📰 Almere Kiest</a></div>
+    </div>
+
+    <div class="news-card election-card">
+      <div class="news-card-header">
+        <span class="nc-num election-num">2</span>
+        <span class="nc-title">1Almere leest de verkiezingsprogramma's — dossierserie</span>
+      </div>
+      <div class="nc-meta"><span class="src src-1a">1ALMERE</span></div>
+      <div class="nc-desc">1Almere pluist alle verkiezingsprogramma's uit en vergelijkt beloftes op wonen, veiligheid, financiën en meer. Eerder kritisch over VVD-plannen.</div>
+      <div class="nc-why"><span>Waarom belangrijk</span>Dit dossier wordt breed gelezen en bepaalt hoe partijen worden gepercipieerd. Wanneer 50PLUS aan de beurt is, moet het programma kloppen en overtuigen.</div>
+      <div class="nc-links"><a href="https://1almere.nl/nieuws/dossier/1almere-leest-de-verkiezingsprogrammas" class="nc-link red" target="_blank">📰 1Almere</a></div>
+    </div>
+
+    <div class="news-card election-card">
+      <div class="news-card-header">
+        <span class="nc-num election-num">3</span>
+        <span class="nc-title">Derde aflevering Stemmen zonder smoesjes online</span>
+      </div>
+      <div class="nc-meta"><span class="src src-adw">ADW</span> <span class="src src-oa">OA</span></div>
+      <div class="nc-desc">Samenwerking ADW en Omroep Almere. Partijen worden gevraagd om eerlijk te zijn over financiering en één keiharde, dateerbare belofte te doen.</div>
+      <div class="nc-why"><span>Waarom belangrijk</span>Breed bekeken serie die opkomst moet verhogen. Kiezers zien hier hoe partijen presteren onder druk. Mogelijk wordt 50PLUS in volgende aflevering uitgenodigd.</div>
+      <div class="nc-links"><a href="https://omroepalmere.nl/2026/02/video-het-weekjournaal-van-afgelopen-week-van-02-t-m-8-februari-is-online/" class="nc-link red" target="_blank">📰 Omroep Almere</a></div>
+    </div>
+
+    <div class="news-card election-card">
+      <div class="news-card-header">
+        <span class="nc-num election-num">4</span>
+        <span class="nc-title">6 maart: verkiezingsdebat voor mensen met een beperking</span>
+      </div>
+      <div class="nc-meta"><span class="src src-oa">OA</span></div>
+      <div class="nc-desc">Stichting ABRI en werkgroep ViP organiseren op 6 maart (12:00–16:00 uur) in het stadhuis gesprekken met politici over veiligheid, toegankelijkheid en participatie.</div>
+      <div class="nc-why"><span>Waarom belangrijk</span>Toegankelijkheid en het VN-verdrag handicap zijn kernthema's van 50PLUS. Dit debat bereikt een doelgroep die direct baat heeft bij onze agenda. Aanwezigheid is essentieel.</div>
+      <div class="nc-links"><a href="https://omroepalmere.nl/2026/02/6-maart-verkiezingsdebat-voor-en-met-mensen-met-een-beperking/" class="nc-link red" target="_blank">📰 Omroep Almere</a></div>
+    </div>
+
+    <div class="news-card election-card">
+      <div class="news-card-header">
+        <span class="nc-num election-num">5</span>
+        <span class="nc-title">D66 organiseert stadsgesprek over vol stroomnet — alle partijen welkom</span>
+      </div>
+      <div class="nc-meta"><span class="src src-1a">1ALMERE</span></div>
+      <div class="nc-desc">D66 nodigt alle partijen uit voor een stadsgesprek over netcongestie. Het energiedossier raakt steeds meer het dagelijks leven in Almere.</div>
+      <div class="nc-why"><span>Waarom belangrijk</span>Netcongestie raakt ouderen direct: geen nieuwe aansluitingen, duurdere energie, onzekerheid over warmtepompen. 50PLUS kan hier het ouderenperspectief inbrengen.</div>
+      <div class="nc-links"><a href="https://1almere.nl/nieuws/artikel/d66-almere-organiseert-stadsgesprek-over-vol-stroomnet-dit-raakt-het-dagelijks-leven" class="nc-link red" target="_blank">📰 1Almere</a></div>
+    </div>
+
+    <div class="news-card election-card">
+      <div class="news-card-header">
+        <span class="nc-num election-num">6</span>
+        <span class="nc-title">Werkgroep schrikt van vrijblijvendheid participatiebeleid</span>
+      </div>
+      <div class="nc-meta"><span class="src src-adw">ADW</span></div>
+      <div class="nc-desc">De werkgroep participatie constateert dat het huidige beleid te vrijblijvend is. Inwoners worden onvoldoende betrokken bij besluiten die hun direct raken.</div>
+      <div class="nc-why"><span>Waarom belangrijk</span>Dit bevestigt het 50PLUS-standpunt over echte inspraak. In campagnetijd extra relevant: bewijst dat huidige coalitie participatie niet serieus neemt.</div>
+      <div class="nc-links"><a href="https://www.almeredezeweek.nl/politiek/politiek/66706/generatie-almere-wil-dat-burgers-echt-gaan-meedoen" class="nc-link red" target="_blank">📰 ADW</a></div>
+    </div>
+
+    <div class="news-card election-card">
+      <div class="news-card-header">
+        <span class="nc-num election-num">7</span>
+        <span class="nc-title">VVD luidt noodklok over gemeentefinanciën — OZB onder vuur</span>
+      </div>
+      <div class="nc-meta"><span class="src src-adw">ADW</span></div>
+      <div class="nc-desc">VVD-fracties uit Almere en 8 andere steden waarschuwen dat gemeentelijke financiën uit de hand lopen. Bekritiseren forse OZB-stijgingen.</div>
+      <div class="nc-why"><span>Waarom belangrijk</span>OZB-stijgingen raken woningeigenaren — veel ouderen. Als VVD dit thema claimt, moet 50PLUS met eigen perspectief komen: koopkracht ouderen, woonlasten, doorstroming.</div>
+      <div class="nc-links"><a href="https://www.vvd.nl/nieuws/liveblog-gemeenteraadsverkiezingen-2026/" class="nc-link red" target="_blank">📰 VVD</a></div>
+    </div>
+
+    <div class="news-card election-card">
+      <div class="news-card-header">
+        <span class="nc-num election-num">8</span>
+        <span class="nc-title">PvdD wil burgerberaad over klimaatbeleid Flevoland</span>
+      </div>
+      <div class="nc-meta"><span class="src src-adw">ADW</span></div>
+      <div class="nc-desc">Partij voor de Dieren wil inwoners meer invloed geven op provinciaal klimaatbeleid via een burgerberaad. Past in bredere trend van directe democratie.</div>
+      <div class="nc-why"><span>Waarom belangrijk</span>Burgerberaad is een democratisch instrument dat aansluit bij de participatie-agenda van 50PLUS. Relevant voor zowel de gemeentelijke als provinciale inzet.</div>
+      <div class="nc-links"><a href="https://www.almeredezeweek.nl/nieuws/algemeen/66858/kunst-leuk-wint-almeerse-cultuurprijs-mogelijkmakersprijs-naa" class="nc-link red" target="_blank">📰 ADW</a></div>
+    </div>
+
+  </div>
+
+  <!-- PARTIJEN IN BEELD -->
+  <div class="callout callout-red">
+    <h3>📊 Partijen in beeld</h3>
+    <div class="election-grid">
+      <div class="eg-item"><span class="party">D66</span><br>Organiseert stadsgesprek netcongestie<br><a href="https://1almere.nl/nieuws/artikel/d66-almere-organiseert-stadsgesprek-over-vol-stroomnet-dit-raakt-het-dagelijks-leven" target="_blank">→ Lees meer</a></div>
+      <div class="eg-item"><span class="party">PvdD</span><br>Wil burgerberaad klimaat + klimaatcrisis uitroepen<br><a href="https://www.almeredezeweek.nl/politiek/politiek/66652/partij-voor-de-dieren-almere-moet-klimaatcrisis-uitroepen" target="_blank">→ Lees meer</a></div>
+      <div class="eg-item"><span class="party">VVD</span><br>Noodklok gemeentefinanciën, tegen OZB-stijgingen<br><a href="https://www.vvd.nl/nieuws/liveblog-gemeenteraadsverkiezingen-2026/" target="_blank">→ Lees meer</a></div>
+      <div class="eg-item"><span class="party">Gen. Almere</span><br>Wil dat burgers echt gaan meedoen in beleid<br><a href="https://www.almeredezeweek.nl/politiek/politiek/66706/generatie-almere-wil-dat-burgers-echt-gaan-meedoen" target="_blank">→ Lees meer</a></div>
+      <div class="eg-item"><span class="party">JA21</span><br>Nieuwkomer — was bij 1e debat, hengelsport in programma<br><a href="https://www.hsvalmere.nl/gemeenteraad-verkiezingen-2026/" target="_blank">→ Lees meer</a></div>
+      <div class="eg-item"><span class="party">Samen v. Almere</span><br>Kandidatenlijst klaar, duo-lijsttrekkers Buyatui &amp; Dalger<br><a href="https://www.almeredezeweek.nl/politiek/politiek/66235/samen-voor-almere-presenteert-kandidatenlijst-voor-verkiezing" target="_blank">→ Lees meer</a></div>
+    </div>
+  </div>
+
+  <!-- ═══════ DEEL 2: 50PLUS RELEVANT ═══════ -->
+  <div class="part-header" style="margin-top:8px">
+    <div class="icon fiftplus">📋</div>
+    <div><h2>Relevant voor 50PLUS</h2><div class="part-sub">Raadswerk, Statenwerk &amp; ouderenbelangen</div></div>
+  </div>
+  <div class="part-divider purple"></div>
+
+  <!-- HOGE PRIORITEIT -->
+  <div class="section">
+    <div class="section-header">
+      <span class="dot dot-red"></span>
+      <h3>Hoge prioriteit</h3>
+      <span class="count">5</span>
+    </div>
+
+    <div class="news-card prio-high">
+      <div class="news-card-header">
+        <span class="nc-num">1</span>
+        <span class="nc-title">Aansluitstop elektriciteit: gemeente noemt situatie 'onacceptabel'</span>
+      </div>
+      <div class="nc-meta"><span class="src src-oa">OA</span> <span class="src src-1a">1ALMERE</span></div>
+      <div class="nc-desc">TenneT waarschuwt voor aansluitstop kleinverbruik in Flevoland. Gemeente Almere noemt dit onacceptabel en dringt aan bij TenneT en het Rijk om prioriteit te geven aan lokale oplossingen. <strong>Raakt bewoners direct: geen nieuwe aansluitingen, onzekerheid energietransitie.</strong></div>
+      <div class="nc-links">
+        <a href="https://omroepalmere.nl/2026/02/gemeente-almere-aangekondigde-aansluitstop-elektriciteit-almere-is-onacceptabel/" class="nc-link purple" target="_blank">📰 Omroep Almere</a>
+        <a href="https://1almere.nl/nieuws/artikel/d66-almere-organiseert-stadsgesprek-over-vol-stroomnet-dit-raakt-het-dagelijks-leven" class="nc-link purple" target="_blank">📰 1Almere</a>
+      </div>
+    </div>
+
+    <div class="news-card prio-high">
+      <div class="news-card-header">
+        <span class="nc-num">2</span>
+        <span class="nc-title">Flevoziekenhuis bundelt krachten met 10 ziekenhuizen voor hartzorg</span>
+      </div>
+      <div class="nc-meta"><span class="src src-1a">1ALMERE</span></div>
+      <div class="nc-desc">Het Flevoziekenhuis sloot een samenwerkingsovereenkomst (CardioNoVo+) met tien Noord-Hollandse ziekenhuizen om hartpatiënten sneller op de juiste plek te helpen. <strong>Hartzorg is cruciaal voor ouderen — positieve ontwikkeling voor de regio.</strong></div>
+      <div class="nc-links"><a href="https://1almere.nl/nieuws/artikel/flevoziekenhuis-bundelt-krachten-met-noord-hollandse-ziekenhuizen-voor-betere-hartzorg" class="nc-link purple" target="_blank">📰 1Almere</a></div>
+    </div>
+
+    <div class="news-card prio-high">
+      <div class="news-card-header">
+        <span class="nc-num">3</span>
+        <span class="nc-title">WOZ-waarde Flevoland stijgt flink — Almere +46,5% in 4 jaar</span>
+      </div>
+      <div class="nc-meta"><span class="src src-of">OF</span> <span class="src src-oa">OA</span></div>
+      <div class="nc-desc">WOZ-waarde in Flevoland stijgt harder dan landelijk gemiddelde. Almere +46,5%, Lelystad zelfs +65% (hoogste van Nederland). <strong>Hogere WOZ = hogere OZB en waterschapslasten. Treft vooral ouderen met vast inkomen.</strong></div>
+      <div class="nc-links">
+        <a href="https://www.omroepflevoland.nl/nieuws/459719/woz-waarde-flevoland-stijgt-flink-zo-merk-jij-het-in-je-portemonnee" class="nc-link purple" target="_blank">📰 Omroep Flevoland</a>
+        <a href="https://omroepalmere.nl/2026/02/gemiddelde-woz-waarde-in-almere-lager-dan-verkoopprijzen-betalen-huiseigenaren-te-weinig-ozb/" class="nc-link purple" target="_blank">📰 Omroep Almere</a>
+      </div>
+    </div>
+
+    <div class="news-card prio-high">
+      <div class="news-card-header">
+        <span class="nc-num">4</span>
+        <span class="nc-title">Stadspas Almere moet rond zomer 2026 starten</span>
+      </div>
+      <div class="nc-meta"><span class="src src-adw">ADW</span></div>
+      <div class="nc-desc">Gemeente werkt samen met uitvoeringspartner BS&F. Digitaal platform in ontwikkeling, breed aanbod voor alle inwoners met extra mogelijkheden voor lage inkomens. <strong>Toegankelijkheid voor ouderen die minder digitaal vaardig zijn is aandachtspunt.</strong></div>
+      <div class="nc-links"><a href="https://www.almeredezeweek.nl/nieuws/algemeen/66793/stadspas-moet-rond-zomer-2026-van-start-gaan" class="nc-link purple" target="_blank">📰 ADW</a></div>
+    </div>
+
+    <div class="news-card prio-high">
+      <div class="news-card-header">
+        <span class="nc-num">5</span>
+        <span class="nc-title">79 wijzigingsvoorstellen op parkeerbeleid</span>
+      </div>
+      <div class="nc-meta"><span class="src src-adw">ADW</span> <span class="src src-oa">OA</span></div>
+      <div class="nc-desc">Massaal aantal wijzigingsvoorstellen ingediend op het parkeerbeleid. Ingezonden brief op Omroep Almere: "de gemeenteraad lijkt de weg kwijt". <strong>Lopend dossier — 50PLUS heeft hier al amendementen op voorbereid.</strong></div>
+      <div class="nc-links">
+        <a href="https://www.almeredezeweek.nl/politiek/politiek/66706/generatie-almere-wil-dat-burgers-echt-gaan-meedoen" class="nc-link purple" target="_blank">📰 ADW</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- VOLGEN -->
+  <div class="section">
+    <div class="section-header">
+      <span class="dot dot-orange"></span>
+      <h3>Volgen</h3>
+      <span class="count">6</span>
+    </div>
+
+    <div class="news-card prio-med">
+      <div class="news-card-header">
+        <span class="nc-num">6</span>
+        <span class="nc-title">Discussie Domus-voorziening Almere Poort laait op na rechterlijke uitspraak</span>
+      </div>
+      <div class="nc-meta"><span class="src src-adw">ADW</span></div>
+      <div class="nc-desc">Tijdens Politieke Markt 12 februari is gesproken over herstel vergunning voor de daklozenopvang in Almere Poort. Gevoelig dossier rond veiligheid en zorg.</div>
+      <div class="nc-links"><a href="https://www.almeredezeweek.nl/politiek/politiek/66235/samen-voor-almere-presenteert-kandidatenlijst-voor-verkiezing" class="nc-link purple" target="_blank">📰 ADW</a></div>
+    </div>
+
+    <div class="news-card prio-med">
+      <div class="news-card-header">
+        <span class="nc-num">7</span>
+        <span class="nc-title">Almere grijpt in bij woningverdeling: voorrang voor leerkrachten</span>
+      </div>
+      <div class="nc-meta"><span class="src src-adw">ADW</span></div>
+      <div class="nc-desc">Gemeente geeft voorrang aan leerkrachten en actieve woningzoekers bij sociale woningverdeling. Stadsbestuur wil ook van Overgooi gemengde woonwijk maken.</div>
+      <div class="nc-links"><a href="https://www.almeredezeweek.nl/politiek/politiek/66706/generatie-almere-wil-dat-burgers-echt-gaan-meedoen" class="nc-link purple" target="_blank">📰 ADW</a></div>
+    </div>
+
+    <div class="news-card prio-med">
+      <div class="news-card-header">
+        <span class="nc-num">8</span>
+        <span class="nc-title">Sociaal erfpacht 'Betaalbaar Thuis' — koopwoningen blijvend betaalbaar</span>
+      </div>
+      <div class="nc-meta"><span class="src src-oa">OA</span></div>
+      <div class="nc-desc">Wethouder Tang enthousiast over erfpacht-instrument dat koopwoningen betaalbaar houdt. Bewoners kopen woning maar niet de grond, erfpacht naar draagkracht.</div>
+      <div class="nc-links"><a href="https://omroepalmere.nl/2026/02/nieuw-sociaal-erfpachtoplossing-betaalbaar-thuis-helpt-gemeenten-koopwoningen-betaalbaar-te-houden/" class="nc-link purple" target="_blank">📰 Omroep Almere</a></div>
+    </div>
+
+    <div class="news-card prio-med">
+      <div class="news-card-header">
+        <span class="nc-num">9</span>
+        <span class="nc-title">Jeugdzorg Lelystad: nieuw kort geding door jeugdinstanties</span>
+      </div>
+      <div class="nc-meta"><span class="src src-of">OF</span></div>
+      <div class="nc-desc">Jeugdbeschermingsorganisaties stappen opnieuw naar de rechter — Lelystad zou in strijd handelen met Jeugdwet. Relevant via begroting en regionale samenwerking.</div>
+      <div class="nc-links"><a href="https://www.omroepflevoland.nl/nieuws/459251/jeugdinstanties-komen-met-nieuw-kort-geding-tegen-lelystad" class="nc-link purple" target="_blank">📰 Omroep Flevoland</a></div>
+    </div>
+
+    <div class="news-card prio-med">
+      <div class="news-card-header">
+        <span class="nc-num">10</span>
+        <span class="nc-title">Tieners speciaal onderwijs krijgen les uit kinderboekjes</span>
+      </div>
+      <div class="nc-meta"><span class="src src-1a">1ALMERE</span></div>
+      <div class="nc-desc">VSO Aventurijn in Almere mist passende lesmethodes. Tieners krijgen les uit kinderboekjes — slecht voor het zelfbeeld, aldus de directeur.</div>
+      <div class="nc-links"><a href="https://1almere.nl/nieuws/artikel/tieners-met-kinderboekjes-speciaal-voortgezet-onderwijs-in-almere-zoekt-volwassen-lesmateriaal" class="nc-link purple" target="_blank">📰 1Almere</a></div>
+    </div>
+
+    <div class="news-card prio-med">
+      <div class="news-card-header">
+        <span class="nc-num">11</span>
+        <span class="nc-title">Flevoland komt 650 reanimatievrijwilligers tekort</span>
+      </div>
+      <div class="nc-meta"><span class="src src-of">OF</span></div>
+      <div class="nc-desc">Tekort aan vrijwilligers bij HartslagNu in Flevoland. Hartstichting vermoedt dat mensen bang zijn om verkeerd te reanimeren.</div>
+      <div class="nc-links"><a href="https://www.omroepflevoland.nl/nieuws/459599/twee-voertuigen-van-de-weg-ongelukken-bij-rutten-en-a6-bij-bant" class="nc-link purple" target="_blank">📰 Omroep Flevoland</a></div>
+    </div>
+  </div>
+
+  <!-- ACHTERGROND -->
+  <div class="section">
+    <div class="section-header">
+      <span class="dot dot-yellow"></span>
+      <h3>Achtergrond</h3>
+      <span class="count">5</span>
+    </div>
+
+    <div class="news-card prio-low">
+      <div class="news-card-header">
+        <span class="nc-num">12</span>
+        <span class="nc-title">Windesheim start bouw nieuwe campus Esplanade</span>
+      </div>
+      <div class="nc-meta"><span class="src src-1a">1ALMERE</span></div>
+      <div class="nc-desc">Na een jaar vertraging begonnen de eerste werkzaamheden voor het nieuwe onderwijsgebouw in het centrum van Almere.</div>
+      <div class="nc-links"><a href="https://1almere.nl/nieuws/artikel/windesheim-start-met-werkzaamheden-nieuw-onderwijsgebouw-aan-de-esplanade" class="nc-link purple" target="_blank">📰 1Almere</a></div>
+    </div>
+
+    <div class="news-card prio-low">
+      <div class="news-card-header">
+        <span class="nc-num">13</span>
+        <span class="nc-title">Toeristenbelasting Almere stijgt naar €10,33 per nacht</span>
+      </div>
+      <div class="nc-meta"><span class="src src-adw">ADW</span></div>
+      <div class="nc-desc">Stijging van 4,4% ten opzichte van vorig jaar. Onderdeel van bredere lastenstijging.</div>
+    </div>
+
+    <div class="news-card prio-low">
+      <div class="news-card-header">
+        <span class="nc-num">14</span>
+        <span class="nc-title">Almere nog even zonder dierenasiel, maar vergunning binnen</span>
+      </div>
+      <div class="nc-meta"><span class="src src-1a">1ALMERE</span> <span class="src src-oa">OA</span></div>
+      <div class="nc-desc">Dierenbescherming heeft vergunning ontvangen om een nieuw asiel te bouwen en exploiteren in Almere.</div>
+      <div class="nc-links"><a href="https://1almere.nl/nieuws/artikel/almere-nog-even-zonder-dierenasiel-maar-er-komt-iets-moois" class="nc-link purple" target="_blank">📰 1Almere</a></div>
+    </div>
+
+    <div class="news-card prio-low">
+      <div class="news-card-header">
+        <span class="nc-num">15</span>
+        <span class="nc-title">Gevangenis Almere mogelijk weer open — Kamer steunt voorstel Ellian</span>
+      </div>
+      <div class="nc-meta"><span class="src src-of">OF</span></div>
+      <div class="nc-desc">Tweede Kamer steunt voorstel van Almeers Kamerlid Ulysse Ellian voor heropening voormalige gevangenis.</div>
+      <div class="nc-links"><a href="https://www.omroepflevoland.nl/nieuws/458542/nieuwsoverzicht-04-02-gluurbuur-filmt-twee-jaar-lang-gevangenis-mogelijk-weer-open" class="nc-link purple" target="_blank">📰 Omroep Flevoland</a></div>
+    </div>
+
+    <div class="news-card prio-low">
+      <div class="news-card-header">
+        <span class="nc-num">16</span>
+        <span class="nc-title">Waterschap Zuiderzeeland: intern onderzoek legt tekortkomingen bloot</span>
+      </div>
+      <div class="nc-meta"><span class="src src-of">OF</span></div>
+      <div class="nc-desc">Bestuurlijke sturing op vergunningverlening, toezicht en handhaving schiet tekort bij het waterschap.</div>
+    </div>
+  </div>
+
+  <!-- AANBEVOLEN ACTIES -->
+  <div class="callout callout-purple">
+    <h3>💡 Aanbevolen acties</h3>
+    <div class="callout-item"><strong>Stemhulp:</strong> Vandaag checken of 50PLUS-standpunten correct staan op almerekiest.nl</div>
+    <div class="callout-item"><strong>ABRI-debat 6 maart:</strong> Aanmelding bevestigen voor het verkiezingsdebat voor mensen met een beperking</div>
+    <div class="callout-item"><strong>D66 stadsgesprek:</strong> Overweeg deelname aan het netcongestie-gesprek — breng ouderenperspectief in</div>
+    <div class="callout-item"><strong>WOZ/OZB:</strong> Eigen standpunt voorbereiden nu VVD dit thema naar zich toetrekt</div>
+    <div class="callout-item"><strong>Stadspas:</strong> Aandacht vragen voor digitale toegankelijkheid voor ouderen bij de uitrol</div>
+  </div>
+
+  <div class="footer">
+    <p>
+      <span class="brand">50PLUS Almere &amp; Flevoland</span><br>
+      Samengesteld door Marc van Rooij — fractievoorzitter<br>
+      <br>
+      Bronnen: <span style="color:#E65100;font-weight:700">ADW</span> Almere DEZE WEEK · <span style="color:#B71C1C;font-weight:700">1A</span> 1Almere · <span style="color:#1B5E20;font-weight:700">OA</span> Omroep Almere · <span style="color:#0D47A1;font-weight:700">OF</span> Omroep Flevoland<br>
+      <br>
+      <em style="color:#BDBDBD">Gegenereerd met AI-ondersteuning · Raadpleeg altijd de originele bronnen</em>
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
